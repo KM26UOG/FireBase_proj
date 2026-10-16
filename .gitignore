@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 firebase-debug.log*
 firebase-debug.*.log*
+jim.txt
 
 # Firebase cache
 .firebase/
@@ -67,3 +68,6 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+#github workflow files
+.github/workflows

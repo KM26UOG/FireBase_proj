@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url(/fonts/Source_Sans_3/static/SourceSans3-Regular.ttf)
+    format("truetype");
+}
+:root {
+  --font: CustomFont;
+  font-family: var(--font);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font);
+}
+/*
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}*/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+  background-color: lightgray;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+.links {
+  font-size: 16px;
+  color: blue;
+}
+.content {
+  color: #663399;
+}
+.content span {
+  color: green;
+}
