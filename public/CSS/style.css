@@ -1,0 +1,36 @@
+div.collapse.navbar-collapse.bg-primary.text-white {
+  color: white;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-color-type: #fff;
+  --bs-table-bg-type: #7eaae8;
+}
+
+.last-five {
+  white-space: nowrap;
+}
+
+.last-five .result {
+  display: inline-block;
+  min-width: 1.5rem;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.last-five .result-win {
+  color: #198754;
+  background-color: #d4edda;
+}
+
+.last-five .result-loss {
+  color: #dc3545;
+  background-color: #f8d7da;
+}
+
+.last-five .result-draw {
+  color: #000;
+  background-color: #dedddc;
+}

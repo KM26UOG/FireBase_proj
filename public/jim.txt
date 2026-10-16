@@ -1,0 +1,51 @@
+#############.  ################
+#  customer #   # Trans Data.  #
+#############   ################
+CustomerNumber  Account number
+name            Date
+surname         TranType
+address Ln1     amount
+address ln2     opening bal
+city            closing bal
+country
+Postcode
+
+the goal of this assignment is to write a modular set of algorithms to generate and print a Bank
+Statement for a user. The main steps in the algorithm are:
+1. Obtain account information and date range (start date and end date) from the User
+2. Generate the transaction data and store this in 
+3. Call a module to print out the result
+
+->def GetAllTransactions(account_number) 
+ which will return all the transactions for a given account
+
+->def GetPersonalInformation(account_number) 
+ which returns the name and address details of the account holde
+
+accountnumber=''
+->def getAccountNumber()
+    return input
+
+->def login()
+    accountnumer = getAccountNumber
+    
+
+
+get accountnumber(cust input)
+while password not correct & attempts <5
+    try password(user input)
+if password correct -> continue
+else lock account 
+
+get date range we want to get statement for (sdate,edate)
+Array transactions = GetAllTransactions(accountnumber)
+sort transaction by transaction.date asc
+
+def build transaction(trans)
+    return transtype is :{trantype},amount: {amount},Opening{OBal},closing:{CBal}
+
+def build statement()
+    top section (GetPersonalInformation(account number))
+    statement for range (sdate to edate)
+    for trans in transactions
+        print(transaction(trans))

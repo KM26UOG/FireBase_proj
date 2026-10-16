@@ -1,170 +1,491 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.19.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.19.0/firebase-auth-compat.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <script
-      defer
-      src="/__/firebase/12.19.0/firebase-database-compat.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
     ></script>
-    <script
-      defer
-      src="/__/firebase/12.19.0/firebase-firestore-compat.js"
-    ></script>
-    <script
-      defer
-      src="/__/firebase/12.19.0/firebase-functions-compat.js"
-    ></script>
-    <script
-      defer
-      src="/__/firebase/12.19.0/firebase-messaging-compat.js"
-    ></script>
-    <script
-      defer
-      src="/__/firebase/12.19.0/firebase-storage-compat.js"
-    ></script>
-    <script
-      defer
-      src="/__/firebase/12.19.0/firebase-analytics-compat.js"
-    ></script>
-    <script
-      defer
-      src="/__/firebase/12.19.0/firebase-remote-config-compat.js"
-    ></script>
-    <script
-      defer
-      src="/__/firebase/12.19.0/firebase-performance-compat.js"
-    ></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body {
-        background: #eceff1;
-        color: rgba(0, 0, 0, 0.87);
-        font-family: Roboto, Helvetica, Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      #message {
-        background: white;
-        max-width: 360px;
-        margin: 100px auto 16px;
-        padding: 32px 24px;
-        border-radius: 3px;
-      }
-      #message h2 {
-        color: #ffa100;
-        font-weight: bold;
-        font-size: 16px;
-        margin: 0 0 8px;
-      }
-      #message h1 {
-        font-size: 22px;
-        font-weight: 300;
-        color: rgba(0, 0, 0, 0.6);
-        margin: 0 0 16px;
-      }
-      #message p {
-        line-height: 140%;
-        margin: 16px 0 24px;
-        font-size: 14px;
-      }
-      #message a {
-        display: block;
-        text-align: center;
-        background: #039be5;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white;
-        padding: 16px;
-        border-radius: 4px;
-      }
-      #message,
-      #message a {
-        box-shadow:
-          0 1px 3px rgba(0, 0, 0, 0.12),
-          0 1px 2px rgba(0, 0, 0, 0.24);
-      }
-      #load {
-        color: rgba(0, 0, 0, 0.4);
-        text-align: center;
-        font-size: 13px;
-      }
-      @media (max-width: 600px) {
-        body,
-        #message {
-          margin-top: 0;
-          background: white;
-          box-shadow: none;
-        }
-        body {
-          border-top: 16px solid #ffa100;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>First Division</title>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>THIS IS A TEST</h1>
-      <p>
-        You're seeing this because you've successfully setup Firebase Hosting.
-        Now it's time to go build something extraordinary!
-      </p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/"
-        >Open Hosting Documentation</a
-      >
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const loadEl = document.querySelector("#load");
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            "auth",
-            "database",
-            "firestore",
-            "functions",
-            "messaging",
-            "storage",
-            "analytics",
-            "remoteConfig",
-            "performance",
-          ].filter((feature) => typeof app[feature] === "function");
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(", ")}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent =
-            "Error loading the Firebase SDK, check the console.";
-        }
-      });
-    </script>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="index.html">
+            <img
+              src="images/white.png"
+              alt="Logo"
+              height="30"
+              class="d-inline-block align-text-top"
+            />
+            First Division
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse bg-primary text-white"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav text-white">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="about.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12">
+            <h1>Welcome to First Division</h1>
+            <p>This is the home page of our website.</p>
+          </div>
+          <div class="col-12 mt-4">
+            <h2>League table</h2>
+            <div class="table-responsive">
+              <table
+                class="table table-striped table-hover table-sm align-middle"
+              >
+                <caption class="visually-hidden">
+                  First Division league standings and each club's last five
+                  results
+                </caption>
+                <!-- for Tablets and larger display all columns, for smaller only
+                show matches played, points and last five results. d-none is
+                bootstrap display none d-md-table-cell is bootstrap display
+                table cell for medium and larger screens -->
+                <thead>
+                  <tr>
+                    <th scope="col">Position</th>
+                    <th scope="col">Club</th>
+                    <th scope="col">MP</th>
+                    <th scope="col" class="d-none d-md-table-cell">W</th>
+                    <th scope="col" class="d-none d-md-table-cell">D</th>
+                    <th scope="col" class="d-none d-md-table-cell">L</th>
+                    <th scope="col" class="d-none d-md-table-cell">GF</th>
+                    <th scope="col" class="d-none d-md-table-cell">GA</th>
+                    <th scope="col" class="d-none d-md-table-cell">GD</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">Last 5</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Man Blue</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">6</td>
+                    <td class="d-none d-md-table-cell">0</td>
+                    <td class="d-none d-md-table-cell">0</td>
+                    <td class="d-none d-md-table-cell">16</td>
+                    <td class="d-none d-md-table-cell">5</td>
+                    <td class="d-none d-md-table-cell">11</td>
+                    <td>18</td>
+                    <td class="last-five">
+                      <span class="result result-win">W</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-win">W</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Gunners</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">5</td>
+                    <td class="d-none d-md-table-cell">0</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">10</td>
+                    <td class="d-none d-md-table-cell">5</td>
+                    <td class="d-none d-md-table-cell">5</td>
+                    <td>15</td>
+                    <td class="last-five">
+                      <span class="result result-win">W</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-win">W</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Seguls</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">4</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">18</td>
+                    <td class="d-none d-md-table-cell">5</td>
+                    <td class="d-none d-md-table-cell">13</td>
+                    <td>13</td>
+                    <td class="last-five">
+                      <span class="result result-loss">L</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-win">W</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Bees</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">4</td>
+                    <td class="d-none d-md-table-cell">0</td>
+                    <td class="d-none d-md-table-cell">12</td>
+                    <td class="d-none d-md-table-cell">6</td>
+                    <td class="d-none d-md-table-cell">6</td>
+                    <td>10</td>
+                    <td class="last-five">
+                      <span class="result result-draw">D</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-draw">D</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Liverpool Blue</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">4</td>
+                    <td class="d-none d-md-table-cell">0</td>
+                    <td class="d-none d-md-table-cell">8</td>
+                    <td class="d-none d-md-table-cell">5</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td>10</td>
+                    <td class="last-five">
+                      <span class="result result-draw">D</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-draw">D</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>London blue</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">15</td>
+                    <td class="d-none d-md-table-cell">13</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td>10</td>
+                    <td class="last-five">
+                      <span class="result result-win">W</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-win">W</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>The Peacocks</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">8</td>
+                    <td class="d-none d-md-table-cell">5</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td>9</td>
+                    <td class="last-five">
+                      <span class="result result-draw">D</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-loss">L</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Tigers</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">8</td>
+                    <td class="d-none d-md-table-cell">6</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td>9</td>
+                    <td class="last-five">
+                      <span class="result result-win">W</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-draw">D</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>Liverpool Red</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">7</td>
+                    <td class="d-none d-md-table-cell">7</td>
+                    <td class="d-none d-md-table-cell">0</td>
+                    <td>9</td>
+                    <td class="last-five">
+                      <span class="result result-draw">D</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-loss">L</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>Tractor Boys</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">0</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">9</td>
+                    <td class="d-none d-md-table-cell">12</td>
+                    <td class="d-none d-md-table-cell">-3</td>
+                    <td>9</td>
+                    <td class="last-five">
+                      <span class="result result-loss">L</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-win">W</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>The Toon</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">10</td>
+                    <td class="d-none d-md-table-cell">13</td>
+                    <td class="d-none d-md-table-cell">-3</td>
+                    <td>8</td>
+                    <td class="last-five">
+                      <span class="result result-win">W</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-loss">L</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>Palace</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">9</td>
+                    <td class="d-none d-md-table-cell">12</td>
+                    <td class="d-none d-md-table-cell">-3</td>
+                    <td>7</td>
+                    <td class="last-five">
+                      <span class="result result-loss">L</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-win">W</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>Man Red</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">9</td>
+                    <td class="d-none d-md-table-cell">9</td>
+                    <td class="d-none d-md-table-cell">0</td>
+                    <td>6</td>
+                    <td class="last-five">
+                      <span class="result result-win">W</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-draw">D</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>Sky Blues</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">0</td>
+                    <td class="d-none d-md-table-cell">4</td>
+                    <td class="d-none d-md-table-cell">5</td>
+                    <td class="d-none d-md-table-cell">11</td>
+                    <td class="d-none d-md-table-cell">-6</td>
+                    <td>6</td>
+                    <td class="last-five">
+                      <span class="result result-loss">L</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-win">W</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>Red Forest</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">5</td>
+                    <td class="d-none d-md-table-cell">8</td>
+                    <td class="d-none d-md-table-cell">-3</td>
+                    <td>5</td>
+                    <td class="last-five">
+                      <span class="result result-draw">D</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-loss">L</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>The Villians</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">6</td>
+                    <td class="d-none d-md-table-cell">11</td>
+                    <td class="d-none d-md-table-cell">-5</td>
+                    <td>5</td>
+                    <td class="last-five">
+                      <span class="result result-loss">L</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-win">W</span>
+                      <span class="result result-draw">D</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">17</th>
+                    <td>Black Cats</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">1</td>
+                    <td class="d-none d-md-table-cell">4</td>
+                    <td class="d-none d-md-table-cell">6</td>
+                    <td class="d-none d-md-table-cell">12</td>
+                    <td class="d-none d-md-table-cell">-6</td>
+                    <td>4</td>
+                    <td class="last-five">
+                      <span class="result result-win">W</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-loss">L</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">18</th>
+                    <td>Cherries</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">0</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">7</td>
+                    <td class="d-none d-md-table-cell">13</td>
+                    <td class="d-none d-md-table-cell">-6</td>
+                    <td>3</td>
+                    <td class="last-five">
+                      <span class="result result-draw">D</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-loss">L</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">19</th>
+                    <td>London White</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">0</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">3</td>
+                    <td class="d-none d-md-table-cell">9</td>
+                    <td class="d-none d-md-table-cell">-6</td>
+                    <td>3</td>
+                    <td class="last-five">
+                      <span class="result result-loss">L</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-draw">D</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">20</th>
+                    <td>The Cottagers</td>
+                    <td>6</td>
+                    <td class="d-none d-md-table-cell">0</td>
+                    <td class="d-none d-md-table-cell">2</td>
+                    <td class="d-none d-md-table-cell">4</td>
+                    <td class="d-none d-md-table-cell">6</td>
+                    <td class="d-none d-md-table-cell">10</td>
+                    <td class="d-none d-md-table-cell">-4</td>
+                    <td>2</td>
+                    <td class="last-five">
+                      <span class="result result-loss">L</span>
+                      <span class="result result-loss">L</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-draw">D</span>
+                      <span class="result result-loss">L</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>copyright &copy; 2026 First Division. All rights reserved.</footer>
   </body>
 </html>
