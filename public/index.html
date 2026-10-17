@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/blue.ico" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,16 +15,16 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
     <title>First Division</title>
   </head>
-  <body>
+  <body class="main">
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand text-white" href="index.html">
+          <a class="navbar-brand" href="index.html">
             <img
-              src="images/white.png"
+              src="images/blue.png"
               alt="Logo"
               height="30"
               class="d-inline-block align-text-top"
@@ -41,66 +42,150 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse bg-primary text-white"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav text-white">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
               <li class="nav-item">
-                <a
-                  class="nav-link active text-white"
-                  aria-current="page"
-                  href="#"
-                  >Home</a
-                >
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="about.html">About</a>
+                <a class="nav-link" href="about.html">About</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <section>
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-12">
-            <h1>Welcome to First Division</h1>
-            <p>This is the home page of our website.</p>
+    <section class="main2">
+      <section class="carousel-section">
+        <div class="container text-center">
+          <h1>Current news</h1>
+          <div
+            id="carouselExample"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row align-items-center">
+                  <div class="col-md-5 news-copy">
+                    <h3>Man Blue face landmark ruling</h3>
+                    <p>
+                      A landmark ruling has put Man Blue back in the spotlight.
+                      Attention now turns to what the decision means for the
+                      club and the league.
+                    </p>
+                  </div>
+                  <div class="col-md-7">
+                    <a
+                      href="https://www.premierleague.com/en/news/4727779/premier-league-statement-manchester-city-fc"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="images/Breaches.png"
+                        class="carousel-image"
+                        alt="Man Blue found guilty of breaching rules"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row align-items-center">
+                  <div class="col-md-5 news-copy">
+                    <h3>Summer spending spree</h3>
+                    <p>
+                      Clubs across First Division are reshaping their squads,
+                      with ambitious summer plans raising expectations before
+                      the first whistle.
+                    </p>
+                  </div>
+                  <div class="col-md-7">
+                    <img
+                      src="images/spending.png"
+                      class="carousel-image"
+                      alt="First Division summer transfer spending"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row align-items-center">
+                  <div class="col-md-5 news-copy">
+                    <h3>Pascal Groß named Player of the Month</h3>
+                    <p>
+                      Pascal Groß takes this month's award after a string of
+                      influential performances for Seguls, contributing goals
+                      and assists when his side needed them.
+                    </p>
+                  </div>
+                  <div class="col-md-7">
+                    <img
+                      src="images/Player of the Month.png"
+                      class="carousel-image"
+                      alt="Pascal Groß with the First Division Player of the Month award"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <div class="col-12 mt-4">
-            <h2>League table</h2>
-            <div class="table-responsive">
+        </div>
+      </section>
+      <section class="league-table-section">
+        <div class="container">
+          <div class="col-12 mt-4 align-middle">
+            <h2 class="text-center">League table</h2>
+            <div class="table-responsive table-container align-middle">
               <table
                 class="table table-striped table-hover table-sm align-middle"
               >
-                <caption class="visually-hidden">
-                  First Division league standings and each club's last five
-                  results
-                </caption>
                 <!-- for Tablets and larger display all columns, for smaller only
                 show matches played, points and last five results. d-none is
                 bootstrap display none d-md-table-cell is bootstrap display
                 table cell for medium and larger screens -->
                 <thead>
                   <tr>
-                    <th scope="col">Position</th>
-                    <th scope="col">Club</th>
-                    <th scope="col">MP</th>
-                    <th scope="col" class="d-none d-md-table-cell">W</th>
-                    <th scope="col" class="d-none d-md-table-cell">D</th>
-                    <th scope="col" class="d-none d-md-table-cell">L</th>
-                    <th scope="col" class="d-none d-md-table-cell">GF</th>
-                    <th scope="col" class="d-none d-md-table-cell">GA</th>
-                    <th scope="col" class="d-none d-md-table-cell">GD</th>
-                    <th scope="col">Pts</th>
-                    <th scope="col">Last 5</th>
+                    <th>Position</th>
+                    <th>Club</th>
+                    <th>MP</th>
+                    <th class="d-none d-md-table-cell">W</th>
+                    <th class="d-none d-md-table-cell">D</th>
+                    <th class="d-none d-md-table-cell">L</th>
+                    <th class="d-none d-md-table-cell">GF</th>
+                    <th class="d-none d-md-table-cell">GA</th>
+                    <th class="d-none d-md-table-cell">GD</th>
+                    <th>Pts</th>
+                    <th>Last 5</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
+                    <th>1</th>
                     <td>Man Blue</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">6</td>
@@ -119,7 +204,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">2</th>
+                    <th>2</th>
                     <td>Gunners</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">5</td>
@@ -138,7 +223,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">3</th>
+                    <th>3</th>
                     <td>Seguls</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">4</td>
@@ -157,7 +242,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">4</th>
+                    <th>4</th>
                     <td>Bees</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">2</td>
@@ -176,7 +261,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">5</th>
+                    <th>5</th>
                     <td>Liverpool Blue</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">2</td>
@@ -195,7 +280,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">6</th>
+                    <th>6</th>
                     <td>London blue</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">3</td>
@@ -214,7 +299,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">7</th>
+                    <th>7</th>
                     <td>The Peacocks</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">2</td>
@@ -233,7 +318,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">8</th>
+                    <th>8</th>
                     <td>Tigers</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">2</td>
@@ -252,7 +337,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">9</th>
+                    <th>9</th>
                     <td>Liverpool Red</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">2</td>
@@ -271,7 +356,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">10</th>
+                    <th>10</th>
                     <td>Tractor Boys</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">3</td>
@@ -290,7 +375,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">11</th>
+                    <th>11</th>
                     <td>The Toon</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">2</td>
@@ -309,7 +394,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">12</th>
+                    <th>12</th>
                     <td>Palace</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">2</td>
@@ -328,7 +413,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">13</th>
+                    <th>13</th>
                     <td>Man Red</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">1</td>
@@ -347,7 +432,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">14</th>
+                    <th>14</th>
                     <td>Sky Blues</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">2</td>
@@ -366,7 +451,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">15</th>
+                    <th>15</th>
                     <td>Red Forest</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">1</td>
@@ -385,7 +470,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">16</th>
+                    <th>16</th>
                     <td>The Villians</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">1</td>
@@ -404,7 +489,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">17</th>
+                    <th>17</th>
                     <td>Black Cats</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">1</td>
@@ -423,7 +508,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">18</th>
+                    <th>18</th>
                     <td>Cherries</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">0</td>
@@ -442,7 +527,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">19</th>
+                    <th>19</th>
                     <td>London White</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">0</td>
@@ -461,7 +546,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">20</th>
+                    <th>20</th>
                     <td>The Cottagers</td>
                     <td>6</td>
                     <td class="d-none d-md-table-cell">0</td>
@@ -484,8 +569,130 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="League-Admin-section home-admin">
+        <div class="container mt-5 align-middle text-center">
+          <h2>League Administrators</h2>
+          <p>
+            Meet the dedicated team behind the scenes, ensuring the smooth
+            operation and success of our league. From managing finances to
+            overseeing competitions, our administrators are committed to
+            providing the best experience for clubs and fans alike.
+          </p>
+          <div class="row mt-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">David Richardson</h5>
+                  <img
+                    src="images/FD_CP.png"
+                    alt="Admin User 1"
+                    class="card-img-top"
+                  />
+                  <p class="card-text">Chairman</p>
+                  <div class="card-footer">
+                    <small class="text-muted"
+                      ><b
+                        >“A great league is built on strong clubs, fair
+                        competition, and a vision that reaches beyond the next
+                        season.”</b
+                      ><br />
+                      Leadership • Ambition • Legacy</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Emma Carter</h5>
+                  <img
+                    src="images/FD_FC.png"
+                    alt="Treasurer"
+                    class="card-img-top"
+                  />
+                  <p class="card-text">Treasurer</p>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <b
+                        >“Success isn't just about what a club spends; it's
+                        about building something sustainable with every
+                        pound.”</b
+                      >
+                      <br />
+                      Transparency • Responsibility • Growth</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">James Okafor</h5>
+                  <img
+                    src="images/FD_SEC.png"
+                    alt="Secretary"
+                    class="card-img-top"
+                  />
+                  <p class="card-text">Secretary</p>
+                  <div class="card-footer">
+                    <small class="text-muted"
+                      ><b
+                        >“Behind every successful competition is good
+                        organisation, clear communication, and a commitment to
+                        fairness.”</b
+                      ><br />
+                      Integrity • Organisation • Fairness</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
-    <footer>copyright &copy; 2026 First Division. All rights reserved.</footer>
+    <footer>
+      <div class="container text-center mt-4">
+        <p>
+          Sponsored by:
+          <a
+            href="https://www.footballmanager.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Football Manager</a
+          >
+          <a
+            href="https://www.fifa.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >FIFA</a
+          >
+          <a
+            href="https://www.uefa.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >UEFA</a
+          >
+          <a
+            href="https://www.fifpro.org/en/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >FIFPRO</a
+          >
+        </p>
+        <p>
+          Offical TV rights partner:<a
+            href="https://www.skysports.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >SKY SPORTS</a
+          >
+        </p>
+      </div>
+      <div>copyright &copy; 2026 First Division. All rights reserved.</div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,219 @@
+/* NAVbar overwrite*/
+div.collapse.navbar-collapse.bg-primary.text-white {
+  color: rgb(52, 96, 216);
+}
+.navbar {
+  --bs-navbar-color: #2870f5;
+  --bs-navbar-hover-color: #01276e;
+  --bs-navbar-active-color: #2870f5;
+  --bs-navbar-brand-color: #2870f5;
+  --bs-navbar-brand-hover-color: #01276e;
+  border-bottom: 1px solid #2870f5;
+  background-color: rgb(255 255 255 / 80%);
+  padding: 0px;
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+  font-size: 1rem;
+}
+
+.main2 h1 {
+  color: #1376cc;
+}
+
+.home-admin,
+.carousel-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: rgb(255 255 255 / 10%);
+  box-shadow: 0 15px 30px rgb(0 0 0 / 15%);
+}
+
+.home-admin h2,
+.league-table-section h2 {
+  color: #1376cc;
+}
+
+.home-admin .row {
+  row-gap: 1rem;
+}
+
+.home-admin .card {
+  height: 100%;
+}
+
+@media (max-width: 576px) {
+  .home-admin,
+  .carousel-section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* CAROUSEL */
+
+.carousel-section > .container {
+  max-width: 1200px;
+}
+
+.carousel {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.news-copy {
+  padding: 1.5rem 2rem;
+  text-align: left;
+}
+
+.news-copy h3 {
+  color: #1376cc;
+}
+
+.carousel-image {
+  display: block;
+  width: 100%;
+  height: 450px;
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border-radius: 50%;
+  background-color: rgb(19 18 204 / 65%);
+  background-size: 60% 60%;
+}
+
+.carousel-control-prev {
+  right: auto;
+  left: -3.5rem;
+  width: 3rem;
+}
+
+.carousel-control-next {
+  right: -3.5rem;
+  left: auto;
+  width: 3rem;
+}
+/*bootstrap sm size 576 */
+@media (max-width: 576px) {
+  .carousel-control-prev {
+    left: 0;
+    width: 15%;
+  }
+
+  .carousel-control-next {
+    right: 0;
+    width: 15%;
+  }
+
+  .news-copy {
+    padding: 1rem 2rem 0;
+    text-align: center;
+  }
+
+  .carousel-image {
+    height: min(55vh, 75vw);
+    padding: 0.5rem 2rem 1rem;
+  }
+}
+/* League table*/
+/* 1280x720px i want league table to be scaled
+@media (min-width: 1280px) {
+  .table-container {
+    width: 50%;
+    margin-inline: auto;
+  }
+}*/
+.table-container {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.league-table-section > .container {
+  max-width: 1200px;
+}
+/*n-th child stuff*/
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: #b3cef5;
+}
+.table-striped > tbody > tr > td:nth-child(10) {
+  font-weight: 900;
+}
+.table-striped > tbody > tr > td:nth-child(3) {
+  font-weight: 900;
+}
+
+.last-five {
+  white-space: nowrap;
+}
+
+.last-five .result {
+  display: inline-block;
+  min-width: 1.5rem;
+  padding: 0.15rem 0.35rem;
+  border-radius: 5px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.last-five .result-win {
+  color: #198754;
+  background-color: #d4edda;
+}
+
+.last-five .result-loss {
+  color: #dc3545;
+  background-color: #f8d7da;
+}
+
+.last-five .result-draw {
+  color: #000;
+  background-color: #dedddc;
+}
+/* League Admin*/
+.card {
+  box-shadow: 0 15px 30px rgb(0 0 0 / 50%);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+/* Card hover make it move 
+Apply lighter shadow to make it look like its floating
+*/
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(13, 110, 253, 0.2);
+}
+.card-text,
+.card-title {
+  text-align: center;
+  color: #1376cc;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+/* FOOTER */
+/* FOOTER */
+footer {
+  background-color: #f8f9fa;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+footer p {
+  margin: 0;
+}
+/*background set*/
+.main {
+  background: url("../images/bg_white.png") center / cover no-repeat fixed;
+}

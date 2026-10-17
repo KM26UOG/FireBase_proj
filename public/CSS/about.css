@@ -1,0 +1,70 @@
+/* NAV bootstrap overwrite */
+
+.navbar {
+  --bs-navbar-color: #fff;
+  --bs-navbar-hover-color: gray;
+  --bs-navbar-active-color: #fff;
+  --bs-navbar-brand-color: #fff;
+  --bs-navbar-brand-hover-color: gray;
+
+  background-color: rgb(255 255 255 / 10%);
+  padding: 0px;
+}
+body {
+  color: white;
+}
+
+.about {
+  background: url("../images/bg_navy.png") center / cover no-repeat fixed;
+}
+/* filler formating*/
+.about main > .container {
+  max-width: 960px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/*
+rgb colours from background image
+dark = 1,14,40(bottom left colour)
+bright = 23 89 184( bright streak)
+lion = 8 35 77
+*/
+.about-intro,
+.about-block {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 5px;
+  background-color: rgb(1 14 40 / 72%);
+}
+
+.about-intro {
+  border-top: 4px solid rgb(23 89 184);
+}
+
+.about-intro h1 {
+  margin-bottom: 10px;
+}
+
+.about-block h2 {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(255 255 255 / 30%);
+  color: rgb(23 89 184);
+}
+
+.about-block li {
+  margin-bottom: 5px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #f8f9fa;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+footer p {
+  margin: 0;
+}
